@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+
+function Button(props) {
+	const handleClick = () => props.onClickFunction(props.increment);
+
+	return (
+		<button onClick={handleClick}>
+			+{props.increment}
+		</button>
+	);
+}
+
+function Display(props) {
+	return (
+		<div className="display">{props.count}</div>
+	);
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [counter, setCounter] = useState(0);
+	const incrementCounter = (incrementValue) => setCounter(counter+incrementValue);
+
+	return (
+		<div className="App">
+			<h1>Increment Counter</h1>
+			<Button onClickFunction={incrementCounter} increment={1} />
+			<Button onClickFunction={incrementCounter} increment={5} />
+			<Button onClickFunction={incrementCounter} increment={10} />
+			<Button onClickFunction={incrementCounter} increment={100} />
+			<Display count={counter}/>
+			<button className="reset" onClick={ () => setCounter(0) }>Reset</button>
+		</div>
+	);
 }
 
 export default App;
