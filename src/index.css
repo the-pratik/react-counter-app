@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	text-align: center;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 		sans-serif;
@@ -35,7 +36,7 @@ code {
 
 .App button {
 	font-family: cursive;
-	margin: 0 20px;
+	margin: 0 20px 5px 20px;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
