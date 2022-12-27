@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# react-counter-app
+
+![m-reactcounterapp](https://user-images.githubusercontent.com/66945794/209657139-5c42fe06-1093-4949-b7ad-58dfe9474a15.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
